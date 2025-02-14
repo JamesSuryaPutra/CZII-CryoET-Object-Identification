@@ -15,4 +15,5 @@ This competition challenges you to create ML algorithms that automatically annot
 # Evaluation
 Submissions are evaluated by calculating the F-beta metric with a beta value of 4. The F-beta metric with a beta value of 4 is used to prioritize recall over precision, heavily penalizing missed particles while being more lenient on false positives. In this context, a particle is considered "true" if it lies within a factor of 0.5 of the particle of interest's radius. There are five particles of interest, with three "easy" particles (ribosome, virus-like particles, and apo-ferritin) assigned a weight of 1 and two "hard" particles (thyroglobulin and β-galactosidase) assigned a weight of 2. The results are micro-averaged across multiple tomograms, ensuring that precision and recall are computed across the entire dataset before applying the F-beta formula. The higher beta value (4) and particle weights emphasize the correct identification of particles, particularly the "hard" ones, making recall the dominant factor in evaluating performance.
 
-Note: beta-amylase particles are included in the training data and may be predicted, but they are assigned a weight of 0 and have no impact on scoring.
+Note:
+Beta-amylase particles are included in the training data and may be predicted, but they are assigned a weight of 0 and have no impact on scoring.
